@@ -1,0 +1,22 @@
+# Plugin manager
+packer_compiled.lua
+plugin/packer_compiled.lua
+
+# Plugins installés
+plugged/
+pack/
+
+# Fichiers temporaires
+*.swp
+*.swo
+*~
+
+# Undo history
+undodir/
+
+# Log et cache
+.cache/
+log/
+
+# Backup
+backup/
