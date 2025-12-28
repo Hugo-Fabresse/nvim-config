@@ -25,6 +25,5 @@ telescope.setup({
         },
     },
 })
-
 -- EOF
 

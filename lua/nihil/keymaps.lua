@@ -35,10 +35,6 @@ local function open_file_tree()
     })
 end
 
-vim.keymap.set('n', '<Leader>p', open_file_tree, { noremap = true, silent = true })
-vim.keymap.set('n', '<Leader>f', function()
-    require('telescope.builtin').live_grep({ cwd = vim.loop.cwd() })
-end, { noremap = true, silent = true })
 -- Déplacer lignes en mode visuel
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", {silent=true})
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", {silent=true})
@@ -49,10 +45,9 @@ vim.keymap.set('n', 'n', 'nzzzv', {silent=true})
 vim.keymap.set('n', 'N', 'Nzzzv', {silent=true})
 -- Copier dans le clipboard système
 vim.keymap.set({'n','v'}, '<Leader>y', '"+y', {silent=true})
--- Recherche Telescope
-vim.keymap.set('n', '<Leader>ff', ':Telescope find_files<CR>', {silent=true})
-vim.keymap.set('n', '<Leader>fg', ':Telescope live_grep<CR>', {silent=true})
-vim.keymap.set('n', '<Leader>fb', ':Telescope buffers<CR>', {silent=true})
-
+-- Telescope shortcuts
+vim.keymap.set('n', '<Leader>p', open_file_tree, { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>f', ':Telescope find_files<CR>', {silent=true})
+vim.keymap.set('n', '<Leader>b', ':Telescope buffers<CR>', {silent=true})
 -- EOF
 
